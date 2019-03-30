@@ -4,7 +4,7 @@ import hashlib
 import redis
 
 app = Flask(__name__)
-# hostname defined in docker-compose
+# hostname is service name in docker-compose by default
 cache = redis.StrictRedis(host='redis', port=6379, db=0)
 default_name = "Kurt Marshall"
 salt = 'UNIQ_SALT'
